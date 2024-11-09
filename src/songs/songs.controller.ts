@@ -26,7 +26,7 @@ export class SongsController {
   @Get()
   getSongs() {
     try {
-      return 'songs';
+      return this.songsService.getAllSongs();
     } catch (error) {
       throw new HttpException(error.message, HttpStatus.BAD_REQUEST);
     }
